@@ -19,7 +19,7 @@ public class LongestRegularBracketSequence {
             }
             if(stack.isEmpty()) continue;
             int pop = stack.pop();
-            dp[i] = i - pop + 1 + (pop == 1 ? 0 : dp[pop - 1]);
+            dp[i] = i - pop + 1 + (pop == 0 ? 0 : dp[pop - 1]);
             ans = Math.max(ans, dp[i]);
         }
 
